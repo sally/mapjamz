@@ -3,3 +3,9 @@ users = 20.times.map do
                 :email      => Faker::Internet.email,
                 :password   => 'password' )
 end
+
+
+sally = User.create!(
+  :username => 's',
+  :email => 's@s',
+  :password => 's')
