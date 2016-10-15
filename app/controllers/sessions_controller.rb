@@ -1,9 +1,9 @@
-get '/sessions/new' do
+get '/login' do
   erb :'sessions/new'
 end
 
 
-post '/sessions' do
+post '/login' do
   @user = User.find_by_email(params[:email])
 
   if @user && @user.password == params[:password]
@@ -17,11 +17,7 @@ post '/sessions' do
   end
 end
 
-
-
-# delete '/sessions/:id' do
-delete '/sessions' do
-  # session[:id] = nil
+get '/logout' do
   logout 
   redirect '/'
 end
