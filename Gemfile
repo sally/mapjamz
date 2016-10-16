@@ -17,7 +17,9 @@ gem 'shotgun'
 gem 'pry'
 gem 'awesome_print'
 
+gem 'faker'
 gem 'haml'
+gem 'factory_girl'
 
 group :test do
   gem 'shoulda-matchers'
@@ -26,10 +28,9 @@ group :test do
   gem 'capybara'
 end
 
-group :test, :development do
-  gem 'factory_girl'
-  gem 'faker'
-end
+# group :test, :development do
+#   gem 'factory_girl'
+# end
 
 group :api_helpers do
   gem 'httparty'
