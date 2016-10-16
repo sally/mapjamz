@@ -11,3 +11,7 @@ get '/session-clearer' do
   session.clear 
   p session
 end
+
+get '/test' do 
+  erb :test
+end

@@ -1,5 +1,7 @@
 <h3>Top tracks from <%= @location.country %></h3>
 
+<%= erb :'partials/_location_map', layout: false, locals: {lat: @latitude, lng: @longitude} %> 
+
 <ul>
   <% @top_tracks.each do |track| %>
     <li><%= track.name %></li>
