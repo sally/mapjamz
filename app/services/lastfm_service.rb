@@ -10,10 +10,10 @@ module LastFmService
 
     parsed_response = response.parsed_response
     parsed_response['lfm']['tracks']['track']
-    parsed_response['lfm']['tracks']['track'].each do |track|
+    parsed_response['lfm']['tracks']['track'].map do |track|
       # Track.find_or_create_by(
       #   name: track["name"])
-      p track['name'] 
+      track['name'] 
     end
   end
 end

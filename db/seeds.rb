@@ -12,10 +12,10 @@ sally = User.create!(
 
 ####
 
-spain=Location.create(country: 'spain')
+# spain=Location.create(country: 'spain')
 
-tr1=Track.create(name: 'hotline bling')
-tr2=Track.create(name: 'peach')
+# tr1=Track.create(name: 'hotline bling')
+# tr2=Track.create(name: 'peach')
 
-spain.tracks << tr1
-spain.tracks << tr2
+# spain.tracks << tr1
+# spain.tracks << tr2
