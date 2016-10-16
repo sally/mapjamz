@@ -4,7 +4,7 @@ module LastFmService
   KEY = ENV['LAST_FM_API_KEY']
 
   def self.top_tracks(country)
-    url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=#{country}&api_key=#{KEY}"
+    url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=#{country}&limit=25&api_key=#{KEY}"
 
     response = HTTParty.get(url)
 
