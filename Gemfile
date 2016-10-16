@@ -17,7 +17,7 @@ gem 'shotgun'
 gem 'pry'
 gem 'awesome_print'
 
-gem 'faker'
+gem 'haml'
 
 group :test do
   gem 'shoulda-matchers'
@@ -28,6 +28,7 @@ end
 
 group :test, :development do
   gem 'factory_girl'
+  gem 'faker'
 end
 
 group :api_helpers do
