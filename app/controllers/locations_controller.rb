@@ -6,7 +6,11 @@ post '/locations' do
     @location.tracks << Track.find_or_create_by(name: track)
   end
 
-  redirect "/locations/#{@location.id}"
+  if request.xhr?
+    
+  else
+    redirect "/locations/#{@location.id}"
+  end
 end
 
 get '/locations/:id' do 
