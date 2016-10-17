@@ -18,15 +18,21 @@
   <title>MapJamz</title>
 </head>
 <body>
+<div id='main-container'>
   <header>
-    <%= erb :'_header' %>
+  <div id='logo-header'>
+  MapJamz{🎵}
+  </div>
+  <div id='form-header'>
+  </div>
+  <div id='session-header'>
+    <%= erb :'/partials/_session_header' %>
+  </div>
   </header>
-
-  <h1>MapJamz{🎵}</font></h1>
-  <h2>sounds from elsewhere</h2>
   
   <%= yield %>
 </body>
+</div>
 
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap">
