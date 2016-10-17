@@ -20,7 +20,8 @@ function locationFormSubmitListener(formId){
     });
 
     request0.done(function(response){
-      console.log(response);
+      $('#tracks-container').empty();
+      $('#tracks-container').append(response);
     });
 
     var request1 = $.ajax({
@@ -30,7 +31,7 @@ function locationFormSubmitListener(formId){
     });
 
     request1.done(function(response){
-      console.log(response)
+      console.log(response);
     });
 
     var request2 = $.ajax({

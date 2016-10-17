@@ -1,8 +1,12 @@
 post '/locations' do 
   @location = Location.find_or_create_by(country: params[:input_location])
+  LastFmService.top_tracks(@location.country).each do |track|
+    @location.tracks << Track.find_or_create_by(name: track)
+  end
+  @top_tracks = @location.tracks
 
   if request.xhr?
-    @location.to_json
+    erb :'/partials/_location_tracks', layout: false, locals: {location: @location, top_tracks: @top_tracks}
   else
     redirect "/locations/#{@location.id}"
   end
