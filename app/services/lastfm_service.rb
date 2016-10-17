@@ -9,11 +9,11 @@ module LastFmService
     response = HTTParty.get(url)
 
     parsed_response = response.parsed_response
-    parsed_response['lfm']['tracks']['track']
-    parsed_response['lfm']['tracks']['track'].map do |track|
-      # Track.find_or_create_by(
-      #   name: track["name"])
-      track['name'] 
+    track_list = parsed_response['lfm']['tracks']['track']
+    track_list.map do |track|
+      {name: track['name'],
+       artist: track['artist']['name'],
+       image_url: track['image'][3]['__content__']}
     end
   end
 end
