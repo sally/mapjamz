@@ -1,5 +1,5 @@
 post '/locations' do 
-  @location = Location.find_or_create_by(country: params[:input_location])
+  @location = Location.find_or_create_by(country: params[:input_location].downcase)
   LastFmService.top_tracks(@location.country).each do |track|
     @location.tracks << Track.find_or_create_by(name: track)
   end
