@@ -1,7 +1,6 @@
 post '/locations' do 
   @location = Location.find_or_create_by(country: params[:input_location].downcase)
-  create_and_assign_tracks(@location.country)
-  @top_tracks = @location.tracks
+  @top_tracks = create_and_assign_tracks(@location.country)
 
   if request.xhr?
     erb :'/partials/_location_tracks', layout: false, locals: {location: @location, top_tracks: @top_tracks}
