@@ -1,4 +1,4 @@
 class Track < ActiveRecord::Base
-  has_many :toptracks
-  has_many :locations, through: :toptracks
+  has_many :top_tracks
+  has_many :locations, through: :top_tracks
 end

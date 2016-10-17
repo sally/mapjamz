@@ -6,8 +6,9 @@ helpers do
   end
 
   def associate_tracks(location_obj)
-    create_tracks(location_obj.country).map do |track|
-      TopTrack.find_or_create_by(track)
+    create_tracks(location_obj.country).map do |track_obj|
+      TopTrack.find_or_create_by(track: track_obj,
+                                 location: location_obj)
     end
   end
 end
