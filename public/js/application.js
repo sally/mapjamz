@@ -24,6 +24,11 @@ function locationFormSubmitListener(formId){
       $('#tracks-container').append(response);
     });
 
+    request0.fail(function(response){
+      $('#tracks-container').empty();
+      $('#tracks-container').append("No tracks found!");
+    });
+
     var request1 = $.ajax({
       url: '/locations/coordinates',
       method: 'POST',
