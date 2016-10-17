@@ -19,11 +19,16 @@
 </head>
 <body>
   <header>
-    <%= erb :'_header' %>
+  <div id='logo-header'>
+  MapJamz{🎵}
+  </div>
+  <div id='form-header'>
+  xzc
+  </div>
+  <div id='session-header'>
+    <%= erb :'/partials/_session_header' %>
+  </div>
   </header>
-
-  <h1>MapJamz{🎵}</font></h1>
-  <h2>sounds from elsewhere</h2>
   
   <%= yield %>
 </body>

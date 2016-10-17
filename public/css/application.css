@@ -1,12 +1,22 @@
-/*#map {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.3;
-}*/
+#form-header{
+  display: inline-block;
+  width:32%;
+}
+
+#logo-header{
+  display: inline-block;
+  width:32%;
+}
+
+#session-header{
+  display: inline-block;
+  width:32%;
+  text-align: right;
+}
+
+header{
+  width:100%;
+}
 
 #map-container {
     width: 100%;
