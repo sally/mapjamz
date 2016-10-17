@@ -15,7 +15,7 @@ post '/locations/coordinates' do
   @coordinates = [@latitude, @longitude]
 
   if request.xhr?
-    @coordinates.to_json
+    erb :'/partials/_location_map', layout: false, locals: {lat: @latitude, lng: @longitude}
   else
     "cry"
   end

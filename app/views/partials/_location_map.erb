@@ -1,4 +1,6 @@
-<script>
+<div id="map"></div>
+
+<script id="map-bg">
   function initMap() {
     var location = {lat: <%= lat %>, lng: <%= lng %>};
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -118,6 +120,6 @@
   }
 </script>
 
-<div id="map-container">
-<div id="map"></div>
-</div>
+<script id="map-bg-async" async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap">
+</script>

@@ -40,7 +40,18 @@ function locationFormSubmitListener(formId){
     });
 
     request2.done(function(response){
-      console.log(response)
+      // var parsed_response = $.parseJSON(response);
+
+      // console.log(response);
+
+      $('#map-container').empty();
+
+      $('#map-container').append(response);
+
+      console.log(document.getElementById("map-bg").innerHTML);
+
+      eval(document.getElementById("map-bg").innerHTML);
+      eval(document.getElementById("map-bg-async").innerHTML);
     });
   })
 }
