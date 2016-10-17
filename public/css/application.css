@@ -1,12 +1,16 @@
-#form-header{
-  display: inline-block;
-  width:32%;
-}
-
 #logo-header{
   display: inline-block;
   width:32%;
 }
+
+#form-header{
+  display: inline-block;
+  width:32%;
+}
+/*#form-header form{
+  margin: 0;
+  position: absolute;
+}*/
 
 #session-header{
   display: inline-block;
