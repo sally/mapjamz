@@ -8,10 +8,21 @@ function locationFormSubmitListener(formId){
   $(formId).on('submit', function(){
     event.preventDefault();
 
+
+
+    if ($('#index-form-container')) {
+
+    }
+
     var locationForm = $(this);
     var address = locationForm.attr('action');
     var method = locationForm.attr('method');
     var locationInput = locationForm.serialize();
+
+    if ($('#index-form-container')) {
+      $('#index-form-container').remove();
+      $('#form-header').append(this);
+    }
 
     var request0 = $.ajax({
       url: address,

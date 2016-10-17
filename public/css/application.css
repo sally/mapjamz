@@ -41,10 +41,10 @@ input
     outline: none;
 }
 
-#form-container {
+#index-form-container {
     height: 100vh;
     position: relative }
-#form-container form {
+#index-form-container form {
     margin: 0;
     position: absolute;
     top: 50%;
