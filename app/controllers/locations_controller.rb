@@ -1,16 +1,25 @@
 post '/locations' do 
   @location = Location.find_or_create_by(country: params[:input_location])
 
-  # logic to create tracks should probably be not in the controller
-  LastFmService.top_tracks(@location.country).each do |track|
-    @location.tracks << Track.find_or_create_by(name: track)
-  end
-
   if request.xhr?
-    
+    @location.to_json
   else
     redirect "/locations/#{@location.id}"
   end
+end
+
+# unrestful:(
+post '/locations/coordinates' do 
+  @latitude = GoogleMapsService.get_latitude(params[:input_location])
+  @longitude = GoogleMapsService.get_longitude(params[:input_location])
+  @coordinates = [@latitude, @longitude]
+
+  if request.xhr?
+    erb :'/partials/_location_map', layout: false, locals: {lat: @latitude, lng: @longitude}
+  else
+    "cry"
+  end
+
 end
 
 get '/locations/:id' do 
