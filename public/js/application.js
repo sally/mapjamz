@@ -25,22 +25,12 @@ function locationFormSubmitListener(formId){
     });
 
     var request1 = $.ajax({
-      url: '/tracks',
-      method: 'POST',
-      data: locationInput
-    });
-
-    request1.done(function(response){
-      console.log(response);
-    });
-
-    var request2 = $.ajax({
       url: '/locations/coordinates',
       method: 'POST',
       data: locationInput
     });
 
-    request2.done(function(response){
+    request1.done(function(response){
       // var parsed_response = $.parseJSON(response);
 
       // console.log(response);
