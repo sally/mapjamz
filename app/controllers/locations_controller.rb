@@ -1,9 +1,6 @@
 post '/locations' do 
   @location = Location.find_or_create_by(country: params[:input_location].downcase)
-  LastFmService.top_tracks(@location.country).each do |track|
-    @location.tracks << Track.find_or_create_by(name: track)
-  end
-  @top_tracks = @location.tracks
+  @top_tracks = create_tracks
 
   if request.xhr?
     erb :'/partials/_location_tracks', layout: false, locals: {location: @location, top_tracks: @top_tracks}
