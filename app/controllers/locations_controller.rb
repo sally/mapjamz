@@ -23,7 +23,6 @@ post '/locations/coordinates' do
   else
     "cry"
   end
-
 end
 
 get '/locations/:id' do 
