@@ -1,8 +1,8 @@
-<h3><%= location.country.capitalize %></h3>
+<h3><%= @location.country.capitalize %></h3>
 <p>Top 25 tracks from the last week</p>
 <ul>
   <% @top_tracks.each do |track| %>
-    <li><%= track.name %></li>
+    <li><%= track.artist %> - <%= track.name %></li>
   <% end %>
 </ul>
 
