@@ -1,7 +1,21 @@
 <h3><%= location.country.capitalize %></h3>
 <p>Top 25 tracks from the last week</p>
-<ul>
+<table>
+
   <% top_tracks.each do |track| %>
-    <li><%= track.name %></li>
+    <tr>
+    <td>
+    <div class="song-info-container">
+      <div class="song-thumbnail">
+        <img class="thumbnail" src="<%= track.image_url %>">
+      </div>
+
+      <div class="song-info-init">
+         <span class="song-info-artist"><%= track.artist %></span></br>
+         <%= track.name %>
+      </div>
+    </div> <!-- song info container end -->
+    </td>
+    </tr>
   <% end %>
-</ul>
+</table>

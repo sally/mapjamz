@@ -7,10 +7,8 @@
   display: inline-block;
   width:32%;
 }
-/*#form-header form{
-  margin: 0;
-  position: absolute;
-}*/
+#form-header form{
+}
 
 #session-header{
   display: inline-block;
@@ -55,3 +53,26 @@ input
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%) }
+
+.song-thumbnail{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.thumbnail{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.song-info-init{
+  display: inline-block;
+  height: 100px;
+  width: 400px;
+  vertical-align: top;
+}
+
+.song-info-artist{
+  font-size: 1.2em;
+}
