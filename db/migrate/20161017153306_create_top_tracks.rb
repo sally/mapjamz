@@ -1,4 +1,4 @@
-exclass CreateTopTracks < ActiveRecord::Migration
+class CreateTopTracks < ActiveRecord::Migration
   def change
     create_table :top_tracks do |t|
       t.integer :location_id
