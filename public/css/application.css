@@ -1,3 +1,11 @@
+a, a:visited{
+  color: #faebd7;
+}
+
+a:hover{
+  color: #17263c;
+}
+
 #logo-header{
   display: inline-block;
   width:32%;
@@ -43,6 +51,10 @@ input
     outline: none;
 }
 
+.tracks-container{
+  width: 100%;
+}
+
 #index-form-container {
     height: 100vh;
     position: relative }
@@ -69,10 +81,26 @@ input
 .song-info-init{
   display: inline-block;
   height: 100px;
-  width: 400px;
+  width: 500px;
   vertical-align: top;
 }
 
 .song-info-artist{
   font-size: 1.2em;
+}
+
+.top-tracks-header{
+  text-align: center;
+}
+
+.country-name{
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.country-tag{
+  font-size: 1.5em;
+  text-transform: lowercase;
+  letter-spacing: 3px;
 }

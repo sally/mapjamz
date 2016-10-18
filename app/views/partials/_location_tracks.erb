@@ -1,6 +1,9 @@
-<h3><%= location.country.capitalize %></h3>
-<p>Top 25 tracks from the last week</p>
-<table>
+<div class="top-tracks-header">
+<span class="country-name"><%= location.country.capitalize %></span>
+<p><span class="country-tag">Top 25 tracks from the last week</span></p>
+</div>
+
+<table align="center" class="top-tracks-holder">
 
   <% top_tracks.each do |track| %>
     <tr>
