@@ -6,26 +6,26 @@ a:hover{
   color: #17263c;
 }
 
+header{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
 #logo-header{
-  display: inline-block;
-  width:32%;
+  width: calc(33% - 1em);
 }
 
 #form-header{
-  display: inline-block;
-  width:32%;
-}
-#form-header form{
+  width: calc(33% - 1em);
+  display: flex;
+  justify-content: center;
 }
 
 #session-header{
-  display: inline-block;
-  width:32%;
+  width: calc(33% - 1em);
   text-align: right;
-}
-
-header{
-  width:100%;
 }
 
 #map-container {
@@ -81,7 +81,6 @@ input
 .song-info-init{
   display: inline-block;
   height: 100px;
-  width: 500px;
   vertical-align: top;
 }
 
