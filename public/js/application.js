@@ -1,11 +1,19 @@
 $(document).ready(function(){
+  loginLinkListener('header');
   locationFormSubmitListener('#main-container');
   imgClickListener('#tracks-container')
   });
 
+function loginLinkListener(headerTag){
+  $(headerTag).on('click', "a", function(){
+    event.preventDefault();
+    
+  })
+}
+
 
 function locationFormSubmitListener(mainContainerId){
-  $(mainContainerId).on('click', "input[type='submit']", function(){
+  $(mainContainerId).on('click', "#location-submit", function(){
     event.preventDefault();
 
     var locationForm = $(this).parent();
