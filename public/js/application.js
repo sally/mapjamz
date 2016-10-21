@@ -1,7 +1,14 @@
 $(document).ready(function(){
+  loginFormSubmitListener('header');
   locationFormSubmitListener('#main-container');
   imgClickListener('#tracks-container')
   });
+
+function loginFormSubmitListener(headerTag){
+  $(headerTag).on('click', '#login-submit' function(){
+    
+  })
+}
 
 
 function locationFormSubmitListener(mainContainerId){

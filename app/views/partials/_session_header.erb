@@ -1,9 +1,6 @@
 <% if current_user %>
-  <a href="/users/<%= current_user.id %> ">Profile Page</a>
-  <form action="/logout" method="get">
-<!--     <input type="hidden" name="_method" value="DELETE"> -->
-    <input type="submit" value="Logout">
-  </form>
+  <a href="/users/<%= current_user.id %> "><%= current_user.username %></a> | 
+  <a href="/logout">Logout</a>
 <% else %>
   <a href="/login">Login</a> | 
   <a href="/users/new">Register</a>
