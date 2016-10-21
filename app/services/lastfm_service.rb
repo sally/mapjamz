@@ -23,18 +23,20 @@ module LastFmService
   # end
 
   def self.top_tracks(country)
-    url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=#{country}&limit=25&api_key=#{KEY}"
+    url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=#{country}&limit=10&api_key=#{KEY}"
 
     response = HTTParty.get(url)
 
     parsed_response = response.parsed_response
     track_list = parsed_response['lfm']['tracks']['track']
+
+    hipster_paragraph = Faker::Hipster.paragraph
     
     track_list.map do |track|
       {name: track['name'],
        artist: track['artist']['name'],
        image_url: track['image'][3]['__content__'],
-       summary: "Meditation kale chips locavore 8-bit venmo pabst. Tilde carry chambray kickstarter actually mixtape chicharrones polaroid. Blog street loko schlitz. Lo-fi crucifix heirloom ethical wes anderson. Kinfolk quinoa pop-up vice pbr&b selfies xoxo post-ironic. Health leggings bespoke sustainable. Meh pop-up hashtag wolf yuccie scenester. Tote bag chicharrones five dollar toast squid 90's try-hard vinegar bitters."}
+       summary: hipster_paragraph}
     end
   end
 end
