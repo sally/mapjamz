@@ -78,6 +78,11 @@ input
   border-radius: 50%;
 }
 
+.song-info-container{/*
+  display: flex;
+  justify-content: center;*/
+}
+
 .song-info-init{
   display: inline-block;
   height: 100px;
@@ -102,4 +107,35 @@ input
   font-size: 1.5em;
   text-transform: lowercase;
   letter-spacing: 3px;
+}
+
+.summary{
+  max-height: 0;
+  overflow: hidden;
+
+  transition: all .4s linear;
+
+  margin-bottom: 1em;
+}
+
+.summary.active{
+  height: auto;
+  max-height: 300px;
+  overflow: auto;
+
+  transition: all .4s linear;
+
+  /*height: 0px;
+  overflow: hidden;
+  max-height: 0px;
+
+  transition: all .2s linear;*/
+/*  display: none;*/
+}
+
+/* october 20th patch */
+
+.top-tracks-container{
+  width: 30%;
+  margin: 0 auto;
 }

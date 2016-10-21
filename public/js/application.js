@@ -1,6 +1,6 @@
 $(document).ready(function(){
   locationFormSubmitListener('#main-container');
-
+  imgClickListener('#tracks-container')
   });
 
 
@@ -54,6 +54,26 @@ function locationFormSubmitListener(mainContainerId){
       eval(document.getElementById("map-bg").innerHTML);
       eval(document.getElementById("map-bg-async").innerHTML);
     });
+  })
+}
+
+function imgClickListener(tracksContainerId){
+  $(tracksContainerId).on('click', ".thumbnail", function(event){
+    event.preventDefault();
+
+    trackId = $(this).attr('id')
+
+    var request = $.ajax({
+      url: 'tracks/' + trackId,
+      method: 'GET'
+    })
+
+    request.done(function(response){
+      // $('#summary' + trackId).append(response);
+      // $('#summary' + trackId).slideToggle();
+
+      $('#summary' + trackId).toggleClass('active').empty().append(response);
+    })
   })
 }
 
