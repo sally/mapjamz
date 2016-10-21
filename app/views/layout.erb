@@ -22,20 +22,19 @@
 <body>
 <div id='main-container'>
   <header>
-  <div id='logo-header'>
-  MapJamz{🎵}
-  </div>
-  <div id='form-header'>
-  </div>
-  <div id='session-header'>
-    <%= erb :'/partials/_session_header' %>
-  </div>
+    <div id='logo-header'>
+    <a href="/">MapJamz{🎵}</a>
+    </div>
+    <div id='form-header'>
+    </div>
+    <div id='session-header'>
+      <%= erb :'/partials/_session_header' %>
+    </div>
   </header>
   
   <%= yield %>
-</body>
 </div>
-
+</body>
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY'] %>&callback=initMap">
 </script>

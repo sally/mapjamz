@@ -1,11 +1,12 @@
 $(document).ready(function(){
-  loginFormSubmitListener('header');
+  loginLinkListener('header');
   locationFormSubmitListener('#main-container');
   imgClickListener('#tracks-container')
   });
 
-function loginFormSubmitListener(headerTag){
-  $(headerTag).on('click', '#login-submit' function(){
+function loginLinkListener(headerTag){
+  $(headerTag).on('click', "a", function(){
+    event.preventDefault();
     
   })
 }
