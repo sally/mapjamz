@@ -30,7 +30,7 @@ module LastFmService
     parsed_response = response.parsed_response
     track_list = parsed_response['lfm']['tracks']['track']
 
-    hipster_paragraph = Faker::Hipster.paragraph
+    hipster_paragraph = "Yolo pour-over viral kombucha. Gentrify tumblr actually fap chillwave 90's whatever retro messenger bag. Normcore single-origin coffee vice five dollar toast gluten-free meh tacos intelligentsia. Cardigan quinoa ethical wayfarers hashtag."
     
     track_list.map do |track|
       {name: track['name'],

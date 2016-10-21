@@ -168,3 +168,31 @@ hr.top-tracks-divider {
 .track-summary{
   font-size: .8em;
 }
+
+/* login and registration form styling */
+  
+.new-container{
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-container form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-container input{
+  display: block;
+  border: 1px #faebd7 solid;
+  border-radius: 3px;
+  width: 85%;
+  margin: .5em;
+  font-size: .9em;
+}
+
+.fourohfour-container{
+  text-align: center;
+}

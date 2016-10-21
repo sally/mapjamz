@@ -34,7 +34,12 @@ end
 # USERS SHOW
 get '/users/:id' do
   @user = User.find(params[:id])
-  erb :'users/show'
+
+  if logged_in? && @user == current_user
+    erb :'users/show'
+  else
+    erb :'404'
+  end
 end
 
 # USERS EDIT

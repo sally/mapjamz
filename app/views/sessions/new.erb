@@ -1,7 +1,19 @@
+
+<div class='new-container'>
 <h1>Login</h1>
+<% if @errors %>
+  <p>Something went wrong...</p>
+  <ul>
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>
+
 
 <form action="/login" method="POST">
   <input type="text" name="email" placeholder="Email:">
   <input type="password" name="password" placeholder="Password:">
   <input id="login-submit" type="submit" value="Login!">
 </form>
+</div>

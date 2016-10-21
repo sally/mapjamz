@@ -1,15 +1,15 @@
 $(document).ready(function(){
-  loginLinkListener('header');
+  // loginLinkListener('header');
   locationFormSubmitListener('#main-container');
   imgClickListener('#tracks-container')
   });
 
-function loginLinkListener(headerTag){
-  $(headerTag).on('click', "a", function(){
-    event.preventDefault();
+// function loginLinkListener(headerTag){
+//   $(headerTag).on('click', "a", function(){
+//     event.preventDefault();
     
-  })
-}
+//   })
+// }
 
 
 function locationFormSubmitListener(mainContainerId){
