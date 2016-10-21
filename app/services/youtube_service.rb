@@ -4,7 +4,7 @@ module YoutubeService
   KEY = ENV['GOOGLE_API_KEY']
 
   def self.get_first_video_id(query)
-    url = "https://www.googleapis.com/youtube/v3/search?key=#{KEY}&type=video&part=snippet&maxResults=1&q=#{query}"
+    url = "https://www.googleapis.com/youtube/v3/search?key=#{KEY}&type=video&part=snippet&maxResults=1&q=#{query}".gsub("\u{d8}", "")
 
     response = HTTParty.get(url)
 
