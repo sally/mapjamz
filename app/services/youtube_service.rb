@@ -6,10 +6,14 @@ module YoutubeService
   def self.get_first_video_id(query)
     url = "https://www.googleapis.com/youtube/v3/search?key=#{KEY}&type=video&part=snippet&maxResults=1&q=#{query}".gsub("\u{d8}", "")
 
-    response = HTTParty.get(url)
+    if url.ascii_only?
+      response = HTTParty.get(url)
 
-    parsed_response = response.parsed_response
+      parsed_response = response.parsed_response
 
-    parsed_response['items'].first['id']['videoId']
+      parsed_response['items'].first['id']['videoId']
+    else
+      "ZXVhOPiM4mk"
+    end
   end
 end

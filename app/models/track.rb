@@ -6,6 +6,4 @@ class Track < ActiveRecord::Base
   def get_youtube_id
     write_attribute(:youtube_id, YoutubeService.get_first_video_id(artist + " " + name))
   end
-
-  
 end
