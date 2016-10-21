@@ -61,7 +61,7 @@ function imgClickListener(tracksContainerId){
   $(tracksContainerId).on('click', ".thumbnail", function(event){
     event.preventDefault();
 
-      trackId = $(this).attr('id')
+    trackId = $(this).attr('id')
 
     var request = $.ajax({
       url: 'tracks/' + trackId,
@@ -69,7 +69,10 @@ function imgClickListener(tracksContainerId){
     })
 
     request.done(function(response){
-      alert(response);
+      // $('#summary' + trackId).append(response);
+      // $('#summary' + trackId).slideToggle();
+
+      $('#summary' + trackId).toggleClass('active').empty().append(response);
     })
   })
 }

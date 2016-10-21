@@ -3,11 +3,8 @@
 <p><span class="country-tag">Top 25 tracks from the last week</span></p>
 </div>
 
-<table align="center" class="top-tracks-holder">
-
+<div class="top-tracks-container">
   <% top_tracks.each do |track| %>
-    <tr>
-    <td>
     <div class="song-info-container">
       <div class="song-thumbnail">
         <img class="thumbnail" id="<%= track.id %>" src="<%= track.image_url %>">
@@ -17,8 +14,8 @@
          <span class="song-info-artist"><%= track.artist %></span></br>
          <%= track.name %>
       </div>
+
     </div> <!-- song info container end -->
-    </td>
-    </tr>
+      <div id="summary<%= track.id %>" class="summary inactive"></div>
   <% end %>
-</table>
+</div>
