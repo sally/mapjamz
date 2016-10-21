@@ -1,8 +1,4 @@
-<% if current_user %>
-  <h2>Welcome <%= current_user.username %>!</h2>
-<% else %>
-  <h2>Welcome to <%= @user.username %>'s profile page!</h2>
-<% end %>
+<h2>Welcome <%= current_user.username %>!</h2>
 
 <div class="compliment-container">
   <%= @user.compliment %>
