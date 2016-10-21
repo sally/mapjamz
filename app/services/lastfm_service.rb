@@ -34,7 +34,7 @@ module LastFmService
       {name: track['name'],
        artist: track['artist']['name'],
        image_url: track['image'][3]['__content__'],
-       summary: "Meditation kale chips locavore 8-bit venmo pabst. Distillery iphone kitsch williamsburg lumbersexual beard authentic. Tilde carry chambray kickstarter actually mixtape chicharrones polaroid. Blog street loko schlitz. Lo-fi crucifix heirloom ethical wes anderson. Plaid chillwave poutine blog echo drinking cornhole. Kinfolk quinoa pop-up vice pbr&b selfies xoxo post-ironic. Health leggings bespoke sustainable. Meh pop-up hashtag wolf yuccie scenester. Tote bag chicharrones five dollar toast squid 90's try-hard vinegar bitters."}
+       summary: "Meditation kale chips locavore 8-bit venmo pabst. Tilde carry chambray kickstarter actually mixtape chicharrones polaroid. Blog street loko schlitz. Lo-fi crucifix heirloom ethical wes anderson. Kinfolk quinoa pop-up vice pbr&b selfies xoxo post-ironic. Health leggings bespoke sustainable. Meh pop-up hashtag wolf yuccie scenester. Tote bag chicharrones five dollar toast squid 90's try-hard vinegar bitters."}
     end
   end
 end
