@@ -78,6 +78,10 @@ input
   border-radius: 50%;
 }
 
+.song-info-container{/*
+  display: flex;
+  justify-content: center;*/
+}
 
 .song-info-init{
   display: inline-block;
@@ -111,8 +115,7 @@ input
 
   transition: all .4s linear;
 
-  margin-bottom: .5em
-  ;
+  margin-bottom: 1em;
 }
 
 .summary.active{
@@ -133,6 +136,6 @@ input
 /* october 20th patch */
 
 .top-tracks-container{
-  width: 40%;
+  width: 30%;
   margin: 0 auto;
 }
