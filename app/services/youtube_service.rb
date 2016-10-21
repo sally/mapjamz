@@ -13,7 +13,7 @@ module YoutubeService
 
       parsed_response['items'].first['id']['videoId']
     else
-      "ZXVhOPiM4mk"
+      ["ZXVhOPiM4mk", "d9TpRfDdyU0"].sample
     end
   end
 end
