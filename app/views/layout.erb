@@ -13,8 +13,9 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
 
-
+  <link rel="stylesheet" href="/css/bootstrap.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title>MapJamz</title>
@@ -23,9 +24,12 @@
 <div id='main-container'>
   <header>
     <div id='logo-header'>
-    <a href="/">MapJamz{🎵}</a>
+      <a href="/">MapJamz</a>{<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#thankYou">🎵</button>}
+
+      <%= erb :'partials/_thank_you_modal', layout: false %>
     </div>
     <div id='form-header'>
+
     </div>
     <div id='session-header'>
       <%= erb :'/partials/_session_header' %>
