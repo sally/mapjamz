@@ -1,7 +1,7 @@
 module GoogleMapsService
   include HTTParty
 
-  KEY = ENV['API_KEY']
+  KEY = ENV['GOOGLE_API_KEY']
 
   def self.get_latitude(country)
     url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{country}&key=#{KEY}"

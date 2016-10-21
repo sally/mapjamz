@@ -139,3 +139,12 @@ input
   width: 30%;
   margin: 0 auto;
 }
+
+.track-youtube-video{
+  width: 100%;
+  display: block;
+}
+
+.track-summary{
+  font-size: .8em;
+}
