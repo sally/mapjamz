@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 function locationFormSubmitListener(mainContainerId){
-  $(mainContainerId).on('click', "input[type='submit']", function(){
+  $(mainContainerId).on('click', "#location-submit", function(){
     event.preventDefault();
 
     var locationForm = $(this).parent();
