@@ -125,7 +125,7 @@ input
 
 .summary.active{
   height: auto;
-  max-height: 450px;
+  max-height: 250px;
   overflow: auto;
 
   transition: all .4s linear;
@@ -161,7 +161,7 @@ hr.top-tracks-divider {
 
 .track-youtube-video{
   width: 100%;
-  max-height: 450px;
+  height: 250px;
   display: block;
 }
 
