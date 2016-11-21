@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!-- Google Fonts API to use Rubik font on website -->
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300" rel="stylesheet">
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
-  <link href="https://fonts.googleapis.com/css?family=Rubik:300" rel="stylesheet">
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
   <link rel="stylesheet" href="/css/application.css">
-
+  <!-- include Bootstrap -->
   <link rel="stylesheet" href="/css/bootstrap.css">
+
+  <!-- jQuery CDN -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- Bootstrap CDN to use Modals -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title>MapJamz</title>
+  <!-- Font Awesome CDN -->
+  <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
+
+  <title>MapJamz{🎵}</title>
 </head>
 <body>
 <div id='main-container'>
@@ -32,10 +36,10 @@
 
     </div>
     <div id='session-header'>
-      <%= erb :'/partials/_session_header' %>
+      <%= erb :'/partials/_credits' %>
     </div>
   </header>
-  
+
   <%= yield %>
 </div>
 </body>
