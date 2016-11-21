@@ -34,5 +34,6 @@ end
 
 group :api_helpers do
   gem 'httparty'
+  gem 'http'
   gem 'dotenv'
 end
