@@ -90,6 +90,7 @@ input
 .song-info-init{
   display: inline-block;
   height: 100px;
+  max-width: 150px;
   vertical-align: top;
 }
 
@@ -124,7 +125,7 @@ input
 
 .summary.active{
   height: auto;
-  max-height: 300px;
+  max-height: 250px;
   overflow: auto;
 
   transition: all .4s linear;
@@ -136,8 +137,6 @@ input
   transition: all .2s linear;*/
 /*  display: none;*/
 }
-
-/* october 20th patch */
 
 .top-tracks-header{
   margin-bottom: 1em;
@@ -156,12 +155,13 @@ hr.top-tracks-divider {
 */}
 
 .top-tracks-container{
-  width: 30%;
+  width: 31vw;
   margin: 0 auto;
 }
 
 .track-youtube-video{
   width: 100%;
+  height: 250px;
   display: block;
 }
 
@@ -170,7 +170,7 @@ hr.top-tracks-divider {
 }
 
 /* login and registration form styling */
-  
+
 .new-container{
   width: 25%;
   margin: 0 auto;
