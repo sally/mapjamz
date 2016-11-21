@@ -155,12 +155,13 @@ hr.top-tracks-divider {
 */}
 
 .top-tracks-container{
-  width: 32vw;
+  width: 31vw;
   margin: 0 auto;
 }
 
 .track-youtube-video{
   width: 100%;
+  max-height: 450px;
   display: block;
 }
 
