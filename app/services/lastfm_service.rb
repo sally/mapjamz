@@ -3,6 +3,7 @@ module LastFmService
 
   KEY = ENV['LAST_FM_API_KEY']
 
+  ## OBSOLETE CODE FOR GETTING SONG INFO FROM LASTFM
   # def self.song_info(artist,song)
   #   p url = "http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=9fc86c40ce0f4704f7e83f97c491ddfa&artist=#{artist}&track=#{song}&format=json"
   #   p uri = Addressable::URI.parse(url).normalize.to_s.gsub(/(\%)/, " ")
@@ -31,7 +32,7 @@ module LastFmService
     track_list = parsed_response['lfm']['tracks']['track']
 
     hipster_paragraph = "Yolo pour-over viral kombucha. Gentrify tumblr actually fap chillwave 90's whatever retro messenger bag. Normcore single-origin coffee vice five dollar toast gluten-free meh tacos intelligentsia. Cardigan quinoa ethical wayfarers hashtag."
-    
+
     track_list.map do |track|
       {name: track['name'],
        artist: track['artist']['name'],
@@ -86,7 +87,7 @@ end
 
 #     parsed_response = response.parsed_response
 #     track_list = parsed_response['lfm']['tracks']['track']
-    
+
 #     # iterate through track list and make track hashes with all attributes for track
 #     track_list.map do |track|
 #       p track['name']
@@ -102,4 +103,3 @@ end
 #     end
 #   end
 # end
-
