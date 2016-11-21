@@ -125,7 +125,7 @@ input
 
 .summary.active{
   height: auto;
-  max-height: 300px;
+  max-height: 450px;
   overflow: auto;
 
   transition: all .4s linear;
