@@ -7,7 +7,7 @@ $(document).ready(function(){
 // function loginLinkListener(headerTag){
 //   $(headerTag).on('click', "a", function(){
 //     event.preventDefault();
-    
+
 //   })
 // }
 
