@@ -31,13 +31,13 @@ module LastFmService
     parsed_response = response.parsed_response
     track_list = parsed_response['lfm']['tracks']['track']
 
-    hipster_paragraph = "Yolo pour-over viral kombucha. Gentrify tumblr actually fap chillwave 90's whatever retro messenger bag. Normcore single-origin coffee vice five dollar toast gluten-free meh tacos intelligentsia. Cardigan quinoa ethical wayfarers hashtag."
+    placeholder_summary = "Here's where I would put a song summary/description. IF I HAD ONE."
 
     track_list.map do |track|
       {name: track['name'],
        artist: track['artist']['name'],
        image_url: track['image'][3]['__content__'],
-       summary: hipster_paragraph}
+       summary: placeholder_summary}
     end
   end
 end
