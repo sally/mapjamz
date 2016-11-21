@@ -36,6 +36,7 @@ module LastFmService
     track_list.map do |track|
       {name: track['name'],
        artist: track['artist']['name'],
+       listeners: track['listeners'],
        image_url: track['image'][3]['__content__'],
        summary: placeholder_summary}
     end
