@@ -72,13 +72,13 @@ input
 
 .song-thumbnail{
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .thumbnail{
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -89,7 +89,7 @@ input
 
 .song-info-init{
   display: inline-block;
-  height: 100px;
+  height: 50px;
   vertical-align: top;
 }
 
@@ -170,7 +170,7 @@ hr.top-tracks-divider {
 }
 
 /* login and registration form styling */
-  
+
 .new-container{
   width: 25%;
   margin: 0 auto;
