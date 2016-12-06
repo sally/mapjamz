@@ -22,4 +22,4 @@ MapJamz is music discovery app to search weekly top tracks by country. The backg
 
 This project was completed in my 6th week at Dev Bootcamp, and was built using Ruby, Sinatra, JavaScript (jQuery and AJAX). I used the Last.fm, Google Maps, and YouTube APIs.
 
-A special thanks goes out to all Bobolinks, Coyotes, and Wolves of SF 2016, as well as DBC teachers and mentors!
+A special thanks goes out to all Bobolinks, Coyotes, and Wolves of SF 2016, as well as DBC teachers and mentors! - In particular, for Alex Carroll, for providing me with the name of this application.
