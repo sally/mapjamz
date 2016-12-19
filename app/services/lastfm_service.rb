@@ -24,6 +24,8 @@ module LastFmService
   # end
 
   def self.top_tracks(country)
+    country = NormalizeCountry(country)
+
     url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=#{country}&limit=10&api_key=#{KEY}"
 
     response = HTTParty.get(url)

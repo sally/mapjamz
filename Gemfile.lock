@@ -50,6 +50,7 @@ GEM
     multi_xml (0.5.5)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
+    normalize_country (0.2.1)
     pg (0.19.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -111,6 +112,7 @@ DEPENDENCIES
   faker
   haml
   httparty
+  normalize_country
   pg
   pry
   rack-test

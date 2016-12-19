@@ -21,6 +21,8 @@ gem 'faker'
 gem 'haml'
 gem 'factory_girl'
 
+gem 'normalize_country'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
