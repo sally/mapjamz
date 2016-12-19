@@ -6,6 +6,9 @@ module LastFmService
   def self.top_tracks(country)
     country = NormalizeCountry(country, :to => :iso_name)
 
+    # Vietnam search still doesn't work through NormalizeCountry, because Last.fm wants "Viet Nam"
+    country = "Viet Nam" if country == "Vietnam"
+
     url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=#{country}&limit=10&api_key=#{KEY}"
 
     response = HTTParty.get(url)
