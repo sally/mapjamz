@@ -84,6 +84,12 @@ namespace :generate do
 end
 
 namespace :db do
+  desc "Clean track records"
+  task :clear_tracks do
+    Track.destroy_all
+    TopTrack.destroy_all
+  end
+
   desc "Drop, create, and migrate the database"
   task :reset => [:drop, :create, :migrate]
 
