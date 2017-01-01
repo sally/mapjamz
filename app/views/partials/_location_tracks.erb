@@ -18,7 +18,11 @@
       </div>
 
       <div class="song-info-length" style="float:right;text-align:right;">
-        <%= track.listeners %> listeners
+        <% if track.listeners %>
+          <%= track.listeners %> listeners
+        <% else %>
+          Listener data not<br>available for Korea
+        <% end %>
       </div>
 
     </div> <!-- song info container end -->
