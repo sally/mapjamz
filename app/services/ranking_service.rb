@@ -5,18 +5,18 @@ module RankingService
   MELON_KEY = ENV['MELON_API_KEY']
 
   def self.top_tracks(country)
-    country = NormalizeCountry(country, :to => :iso_name)
-    # Vietnam search still doesn't work through NormalizeCountry, because Last.fm wants "Viet Nam"
+    # Vietnam and Taiwan searches need to be corrected from NormalizeCountry
     country = "Viet Nam" if country == "Vietnam"
+    country = "Taiwan" if country == "Taiwan, Republic Of China"
 
-    if country == "Korea, Republic of" 
+    if country == "Korea, Republic of"
       top_tracks_from_melon # use Melon as data source
-    else 
+    else
       top_tracks_from_lastfm(country) # use LastFm as data source
     end
   end
 
-  # Melon API response example: 
+  # Melon API response example:
   # { "songs": {
   #     "song": [{"songId" => 30179089,
   #               "songName" => "당신의 밤 (Feat. 오혁)",
@@ -33,7 +33,7 @@ module RankingService
     response = HTTParty.get(url, headers: headers).parsed_response
     track_list = response["melon"]["songs"]["song"]
     track_list.map do |track|
-      { 
+      {
         name: track["songName"],
         artist: track["artists"]["artist"].first["artistName"]
       }
