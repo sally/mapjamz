@@ -29,7 +29,7 @@ module RankingService
   # }}
   def self.top_tracks_from_melon
     url = "http://apis.skplanetx.com/melon/charts/realtime?version=1&page=1&count=10"
-    headers = { "appKey": MELON_KEY, "Accept": "application/json" }
+    headers = { "appKey" => MELON_KEY, "Accept" => "application/json" }
     response = HTTParty.get(url, headers: headers).parsed_response
     track_list = response["melon"]["songs"]["song"]
     track_list.map do |track|
