@@ -1,5 +1,5 @@
 post '/locations' do
-  @location = Location.find_or_create_by(country: NormalizeCountry(country, to: :iso_name))
+  @location = Location.find_or_create_by(country: NormalizeCountry(params[:input_location], to: :iso_name))
   associate_tracks(@location)
   @top_tracks = @location.tracks
 
