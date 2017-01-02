@@ -1,7 +1,8 @@
 post '/locations' do 
   @location = Location.find_or_create_by(country: params[:input_location].downcase)
   associate_tracks(@location)
-  @top_tracks = @location.tracks
+  # This should preserve order of the tracks from their rankings
+  @top_tracks = @location.tracks.joins(:top_tracks).order("top_tracks.id")
 
   if request.xhr?
     erb :'/partials/_location_tracks', layout: false, locals: {location: @location, top_tracks: @top_tracks}

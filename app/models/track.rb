@@ -5,9 +5,11 @@ class Track < ActiveRecord::Base
 
   # validates :name, uniqueness: {scope: :artist}
 
-  before_create :get_youtube_id
+  before_create :populate_youtube_data
 
-  def get_youtube_id
-    write_attribute(:youtube_id, YoutubeService.get_first_video_id(artist + " " + name))
+  def populate_youtube_data
+    image_url, youtube_id = YoutubeService.download_track_data(artist + " " + name)
+    write_attribute(:image_url, image_url) unless self.image_url.present?
+    write_attribute(:youtube_id, youtube_id)
   end
 end
