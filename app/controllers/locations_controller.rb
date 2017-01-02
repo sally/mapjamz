@@ -1,7 +1,6 @@
 post '/locations' do
   @location = Location.find_or_create_by(country: NormalizeCountry(country, to: :iso_name))
   associate_tracks(@location)
-  # This should preserve order of the tracks from their rankings
   @top_tracks = @location.tracks
 
   if request.xhr?
