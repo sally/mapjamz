@@ -1,8 +1,8 @@
-post '/locations' do 
-  @location = Location.find_or_create_by(country: params[:input_location].downcase)
+post '/locations' do
+  @location = Location.find_or_create_by(country: NormalizeCountry(country, to: :iso_name))
   associate_tracks(@location)
   # This should preserve order of the tracks from their rankings
-  @top_tracks = @location.tracks.joins(:top_tracks).order("top_tracks.id")
+  @top_tracks = @location.tracks
 
   if request.xhr?
     erb :'/partials/_location_tracks', layout: false, locals: {location: @location, top_tracks: @top_tracks}
@@ -12,7 +12,7 @@ post '/locations' do
 end
 
 # unrestful:(
-post '/locations/coordinates' do 
+post '/locations/coordinates' do
   @latitude = GoogleMapsService.get_latitude(params[:input_location])
   @longitude = GoogleMapsService.get_longitude(params[:input_location])
   @coordinates = [@latitude, @longitude]
@@ -24,7 +24,7 @@ post '/locations/coordinates' do
   end
 end
 
-get '/locations/:id' do 
+get '/locations/:id' do
   @location = Location.find(params[:id])
   @latitude = GoogleMapsService.get_latitude(@location.country)
   @longitude = GoogleMapsService.get_longitude(@location.country)
