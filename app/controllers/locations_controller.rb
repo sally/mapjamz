@@ -1,7 +1,9 @@
 post '/locations' do
   @location = Location.find_or_create_by(country: NormalizeCountry(params[:input_location], to: :iso_name))
   associate_tracks(@location)
-  @top_tracks = @location.tracks
+  @top_tracks = @location.top_tracks.pluck(:track_id).map do |track_id|
+                  Track.find(track_id)
+                end
 
   if request.xhr?
     erb :'/partials/_location_tracks', layout: false, locals: {location: @location, top_tracks: @top_tracks}
