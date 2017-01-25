@@ -20,13 +20,13 @@ MapJamz is music discovery app to search weekly top tracks by country. The backg
 
 ## About MapJamz
 
-This project was completed in my 6th week at Dev Bootcamp, and was built using Ruby, Sinatra, JavaScript (jQuery and AJAX). I used the Last.fm, Google Maps, and YouTube APIs.
+This project was initially completed in my 6th week at Dev Bootcamp, and was built using Ruby, Sinatra, JavaScript (jQuery and AJAX). I used the Last.fm, Google Maps, and YouTube APIs.
 
-A special thanks goes out to all Bobolinks, Coyotes, and Wolves of SF 2016, as well as DBC teachers and mentors! - In particular, for Alex Carroll, for providing me with the name of this application.
+Since then, MapJamz has grown to more accurately reflect track rankings of certain countries, such as South Korea. For this, the Melon API was integrated (thanks Zino!).
 
 ## Contributors
 
 * [Young Ju (Sally) Park](http://github.com/parkyngj)
 * [Zino Hu](http://github.com/zinosama)
 
-If you are interested in improving or adding new awesome features to MapJamz, please feel free to submit a pull request at any time!
+If you are interested in improving or adding new awesome features to MapJamz, please feel free to submit a pull request for review at any time!
